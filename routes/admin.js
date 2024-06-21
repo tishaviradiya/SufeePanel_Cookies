@@ -1,0 +1,30 @@
+const express=require('express');
+const routs=express.Router();
+const Admin=require('../models/adminModel');
+const adminController=require('../controllers/adminController');
+routs.get('/dashboard',adminController.dashboard);
+routs.get('/addAdmin',adminController.addAdmin);
+routs.post('/adminAddData',Admin.uploadImage,adminController.adminAddData);
+routs.get('/viewAdmin',adminController.viewAdmin);
+routs.get('/deleteAdmin/:id',adminController.deleteAdmin);
+routs.get('/updateAdmin',adminController.updateAdmin);
+routs.post('/updateAdminRecord/:id',Admin.uploadImage,adminController.updateAdminRecord);
+routs.get('/',adminController.login);
+routs.post('/signIn',adminController.signIn);
+routs.get('/logout',async(req,res)=>{
+    res.clearCookie('admin');
+    return res.redirect('/admin');
+});
+routs.get('/profile',adminController.profile);
+routs.get('/editAdmin',adminController.editAdmin);
+routs.post('/editProfileData',Admin.uploadImage,adminController.editProfileData);
+routs.get('/password',adminController.password);
+routs.post('/changePassword',adminController.changePassword);
+// forgetPass
+routs.get('/forgetPass',adminController.forgetPass);
+routs.post('/checkEmailForget',adminController.checkEmailForget);
+routs.get('/otpPage',adminController.otpPage);
+routs.post('/verifyOtp',adminController.verifyOtp);
+routs.get('/adminChangePass',adminController.adminChangePass);
+routs.post('/resetPass',adminController.resetPass);
+module.exports=routs;

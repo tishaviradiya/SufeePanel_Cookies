@@ -1,0 +1,60 @@
+
+<%- include('header')%>
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Profile Page</strong>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Image</td>
+                                    <td><img src="<%= adminData.image%>" alt="profile_image" width="200"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Name</td>
+                                    <td><%= adminData.name%></td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><%= adminData.email%></td>
+                                </tr>
+                                <tr>
+                                    <td>Gender</td>
+                                    <td><%= adminData.gender%></td>
+                                </tr>
+                                <tr>
+                                    <td>Hobby</td>
+                                    <td><%= adminData.hobby%></td>
+                                </tr>
+                                <tr>
+                                    <td>City</td>
+                                    <td><%= adminData.city%></td>
+                                </tr>
+                                <tr>
+                                    <td>Message</td>
+                                    <td><%= adminData.message%></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="/admin/updateAdmin/?id=<%= adminData._id%>"><h3>Edit</h3></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div><!-- .animated -->
+</div><!-- .content -->
+
+
+</div>
+<%- include('footer')%>
