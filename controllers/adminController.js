@@ -241,12 +241,12 @@ module.exports.checkEmailForget=async(req,res)=>{
                 secure: true,
                 auth: {
                   // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-                  user: "tishaviradiya@gmail.com",
-                  pass: "wckhvillclctkhxn",
+                  user: "prarthnakothiya6703@gmail.com",
+                  pass: "fcunkngozlymudwi",
                 },
               });
               const info = await transporter.sendMail({
-                from: '"Fred Foo 👻" <tishaviradiya@gmail.com>', // sender address
+                from: '"Fred Foo 👻" <prarthnakothiya6703@gmail.com>', // sender address
                 to: "tishaviradiya@gmail.com", // list of receivers
                 subject: "Hello ✔", // Subject line
                 text: "Hello world?", // plain text body
